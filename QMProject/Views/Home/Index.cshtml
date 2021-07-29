@@ -1,0 +1,38 @@
+﻿@model QMproject.Models.UserInputModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style type="text/css">
+    body {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+
+<div class="text-center">
+    <h4>Please enter the dates in dd/MM/yyyy format i.e 28/07/2021</h4>
+    <br/>
+    @using (Html.BeginForm("Calculate", "Home", FormMethod.Post))
+    {
+<table align="center">
+    <tr><td>Date 1:<td>@Html.TextBoxFor(model => model.Date1)</td><td>@Html.ValidationMessageFor(model => model.Date1, "", new { @class = "error" })</td></tr>
+
+    <tr><td>Date 2:</td><td>@Html.TextBoxFor(model => model.Date2)</td><td>@Html.ValidationMessageFor(model => model.Date2, "", new { @class = "error" })</td></tr>
+    <tr><td colspan="3"></td></tr>
+    <tr><td colspan="3" class="mt-5">  <button type="submit" class="btn btn-primary">Calculate</button></td></tr>
+    <tr><td colspan="3"></td></tr>
+    <tr>
+        <td colspan="3">
+            <input type="label" id="result" class="col-form-label" size="30" value="@ViewBag.Result" />
+        </td>
+    </tr>
+</table>
+    }
+</div>
+
+
