@@ -1,7 +1,7 @@
 # QuestionMark
 
-This solution calculates the difference between 2 dates
+This solution calculates the difference between 2 dates and displays the differenc in days
 
-tech stack used
+Tech stack used
 
-C# , ASP.net MVC 5 , Nunit , Bootstrap
+C# , ASP.net MVC 5 , LINQ,  NUnit , Bootstrap
